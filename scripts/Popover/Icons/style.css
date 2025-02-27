@@ -1,0 +1,13 @@
+#hvaid-popover-container .hvaid-info-icon {
+  width: 11px;
+  height: 11px;
+  display: inline-block;
+  line-height: 1em;
+  flex-shrink: 0;
+  color: #cccccc;
+  vertical-align: middle;
+  cursor: pointer;
+}
+#hvaid-popover-container .hvaid-info-icon:hover {
+  opacity: 0.7;
+}

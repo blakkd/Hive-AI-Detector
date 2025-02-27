@@ -1,0 +1,119 @@
+#hvaid-popover-container #hvaid-error-page-container {
+  flex: 1 1 0%;
+  min-height: 270px;
+  display: flex;
+  padding: 0px 0px 16px;
+  -webkit-box-align: center;
+  align-items: center;
+  flex-direction: column;
+  -webkit-box-pack: center;
+  justify-content: space-between;
+}
+#hvaid-error-page-container #hvaid-error-content-container {
+  margin-top: 48px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+#hvaid-error-page-container #hvaid-error-content-container #hvaid-warning-icon {
+  width: 64px;
+  height: 64px;
+  flex-shrink: 0;
+  color: rgb(236, 107, 94);
+  vertical-align: middle;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#hvaid-error-page-container #hvaid-error-content-container #hvaid-error-title {
+  font-size: 17px;
+  font-weight: 700;
+  margin-top: 16px;
+  text-align: center;
+  font-style: normal;
+  line-height: 137.5%;
+  color: rgb(112, 116, 121);
+  letter-spacing: 0.005em;
+  font-family: "Roboto", sans-serif;
+}
+#hvaid-error-page-container
+  #hvaid-error-content-container
+  #hvaid-error-details {
+  font-size: 14px;
+  max-height: 150px;
+  overflow-y: auto;
+  margin-top: 5px;
+  padding: 0px 20px;
+  font-weight: 400;
+  text-align: center;
+  font-style: normal;
+  line-height: 137.5%;
+  color: rgb(112, 116, 121);
+  letter-spacing: 0.005em;
+  font-family: "Roboto", sans-serif;
+}
+#hvaid-error-page-container #hvaid-error-buttons-container {
+  gap: 8px;
+  display: flex;
+  cursor: pointer;
+  -webkit-box-align: center;
+  align-items: center;
+  margin-top: 70px;
+  width: 80%;
+  justify-content: space-between;
+}
+#hvaid-error-page-container
+  #hvaid-error-buttons-container.hvaid-error-buttons-container-no-go-back {
+  justify-content: center;
+}
+#hvaid-error-page-container
+  #hvaid-error-buttons-container
+  #hvaid-error-go-back-button {
+  font-size: 12px;
+  font-weight: 500;
+  text-align: center;
+  font-style: normal;
+  line-height: 137.5%;
+  letter-spacing: 0.005em;
+  color: #175cff;
+  font-family: "Roboto", sans-serif;
+}
+#hvaid-error-page-container
+  #hvaid-error-buttons-container
+  #hvaid-error-go-back-button:hover {
+  opacity: 0.7;
+}
+
+#hvaid-error-page-container
+  #hvaid-error-buttons-container
+  #hvaid-try-again-button {
+  display: flex;
+  font-size: 12px;
+  cursor: pointer;
+  font-weight: 500;
+  line-height: 16px;
+  padding: 6px 16px;
+  font-style: normal;
+  -webkit-box-align: center;
+  align-items: center;
+  border-radius: 15px;
+  color: rgb(112, 116, 121);
+  border: 1px solid rgb(112, 116, 121);
+  font-family: "Roboto", sans-serif;
+}
+#hvaid-error-page-container
+  #hvaid-error-buttons-container
+  #hvaid-try-again-button.hvaid-try-again-button-disabled {
+  cursor: not-allowed;
+}
+#hvaid-error-page-container
+  #hvaid-error-buttons-container
+  #hvaid-try-again-button.hvaid-try-again-button-disabled:hover {
+  opacity: 1;
+}
+#hvaid-error-page-container
+  #hvaid-error-buttons-container
+  #hvaid-try-again-button:hover {
+  opacity: 0.7;
+}

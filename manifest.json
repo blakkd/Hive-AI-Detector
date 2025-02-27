@@ -1,0 +1,67 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "manifest_version": 3,
+  "name": "__MSG_appName__",
+  "description": "__MSG_appDesc__",
+  "default_locale": "en",
+  "version": "0.0.10",
+  "icons": {
+    "16": "images/icon-16.png",
+    "32": "images/icon-32.png",
+    "48": "images/icon-48.png",
+    "128": "images/icon-128.png"
+  },
+  "action": {
+    "default_popup": "popup/index.html"
+  },
+  "background": {
+    "service_worker": "service_worker.js",
+    "type": "module"
+  },
+  "content_scripts": [
+    {
+      "js": [
+        "scripts/Popover/utils/common.js",
+        "scripts/Popover/index.js",
+        "scripts/Popover/Icons/index.js",
+        "scripts/Popover/Pages/FormPage/index.js",
+        "scripts/Popover/Pages/FormPage/textareaInput.js",
+        "scripts/Popover/Pages/FormPage/mediaInput/utils.js",
+        "scripts/Popover/Pages/FormPage/mediaInput/icons.js",
+        "scripts/Popover/Pages/FormPage/mediaInput/index.js",
+        "scripts/Popover/Pages/FormPage/TermsAndConditions.js",
+        "scripts/Popover/Pages/FormPage/togglePopover.js",
+        "scripts/Popover/Pages/LoadingPage/loadingStyles.js",
+        "scripts/Popover/Pages/LoadingPage/index.js",
+        "scripts/Popover/Pages/ErrorPage/index.js",
+        "scripts/Popover/Pages/ResultsPage/utils.js",
+        "scripts/Popover/Pages/ResultsPage/Rangeinput/index.js",
+        "scripts/Popover/Pages/ResultsPage/videoResultUtils.js",
+        "scripts/Popover/Pages/ResultsPage/index.js",
+        "scripts/Popover/utils/submitForResults.js",
+        "scripts/Popover/Pages/TermsAndConditionsPage/index.js",
+        "scripts/Popover/utils/listenForResults.js",
+        "scripts/Popover/utils/stopPropagation.js"
+      ],
+      "css": [
+        "scripts/Popover/style.css",
+        "scripts/Popover/Icons/style.css",
+        "scripts/Popover/Pages/FormPage/style.css",
+        "scripts/Popover/Pages/LoadingPage/style.css",
+        "scripts/Popover/Pages/ErrorPage/style.css",
+        "scripts/Popover/Pages/ResultsPage/style.css",
+        "scripts/Popover/Pages/ResultsPage/Rangeinput/style.css",
+        "scripts/Popover/Pages/TermsAndConditionsPage/style.css"
+      ],
+      "matches": ["*://*/*"]
+    }
+  ],
+  "web_accessible_resources": [
+    {
+      "resources": ["icons/*"],
+      "matches": ["*://*/*"]
+    }
+  ],
+  "permissions": ["contextMenus", "storage"]
+}

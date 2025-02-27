@@ -1,0 +1,605 @@
+#hvaid-form-container #hvaid-content-container {
+  padding: 10px 16px;
+  border-radius: 10px;
+  pointer-events: auto;
+  border: 1px solid rgba(131, 138, 155, 0.37);
+  display: flex;
+  justify-content: center;
+  position: relative;
+}
+#hvaid-content-container #hvaid-content-overlay {
+  width: calc(100% - 32px);
+  height: 187.44px; /* height of TextBoxContainer*/
+  background-color: white;
+  backdrop-filter: blur(2px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+#hvaid-content-container
+  #hvaid-content-overlay
+  #hvaid-render-image-spinner-outer {
+  width: 40px;
+  height: 40px;
+  display: inline-block;
+  overflow: hidden;
+}
+#hvaid-content-container
+  #hvaid-content-overlay
+  #hvaid-render-image-spinner-inner {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  backface-visibility: hidden;
+  transform-origin: 0 0;
+}
+#hvaid-content-container
+  #hvaid-content-overlay
+  #hvaid-render-image-spinner-inner
+  div {
+  width: 20px;
+  height: 20px;
+  top: 21px;
+  left: 21px;
+  position: relative;
+  /* width: 80%;
+  height: 80%;
+  left: 2px; */
+  /* left: 50%; */
+  /* top: 50%;
+  transform: translate(-50%, -50%); */
+  border: 2px solid #0076c7;
+  border-top-color: transparent;
+  border-radius: 50%;
+  animation: spinner 0.5952380952380952s linear infinite;
+}
+
+#hvaid-content-container #hvaid-content-overlay p {
+  font-size: 12px;
+  font-family: "Roboto", sans-serif;
+  color: #424245;
+}
+
+#hvaid-form-container #hvaid-content-container #hvaid-preview-container {
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+
+#hvaid-form-container
+  #hvaid-content-container
+  #hvaid-preview-container
+  #hvaid-image-preview-container {
+  position: relative;
+}
+
+#hvaid-form-container
+  #hvaid-content-container
+  #hvaid-preview-container
+  #hvaid-audio-preview-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: calc(100% - 32px);
+  height: 187.44px; /* height of TextBoxContainer*/
+}
+
+#hvaid-form-container
+  #hvaid-content-container
+  #hvaid-preview-container
+  #hvaid-audio-preview-container
+  #hvaid-audio-preview-outer {
+  position: relative;
+  width: fit-content;
+}
+
+#hvaid-form-container
+  #hvaid-content-container
+  #hvaid-preview-container
+  #hvaid-audio-preview-container
+  #hvaid-audio-preview-outer
+  audio {
+  width: 230px;
+  height: 50px;
+}
+
+#hvaid-form-container
+  #hvaid-content-container
+  #hvaid-preview-container
+  #hvaid-icon-preview-container-outer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: calc(100% - 32px);
+  height: 187.44px; /* height of TextBoxContainer*/
+}
+
+#hvaid-form-container
+  #hvaid-content-container
+  #hvaid-preview-container
+  #hvaid-icon-preview-container-outer
+  #hvaid-icon-preview-container-inner {
+  position: relative;
+}
+
+#hvaid-form-container
+  #hvaid-content-container
+  #hvaid-preview-container
+  #hvaid-icon-preview-not-available {
+  color: rgb(96, 99, 103);
+  font-size: 11px;
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  margin: 0;
+  margin-top: 8px;
+  white-space: nowrap;
+}
+
+#hvaid-form-container
+  #hvaid-content-container
+  #hvaid-preview-container
+  #hvaid-icon-preview-container-outer
+  #hvaid-icon-preview-container-inner
+  .hvaid-icon {
+  width: 40px;
+  height: 40px;
+}
+
+#hvaid-form-container
+  #hvaid-content-container
+  #hvaid-preview-container
+  .hvaid-delete-icon {
+  position: absolute;
+  top: -8px;
+  right: -8px;
+  cursor: pointer;
+}
+#hvaid-form-container
+  #hvaid-content-container
+  .hvaid-delete-icon
+  .hvaid-delete-icon-rect:hover {
+  fill: #ff6984;
+}
+#hvaid-form-container
+  #hvaid-content-container
+  #hvaid-preview-container
+  .hvaid-delete-icon.hvaid-delete-icon-horizontal {
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: translate(150%, -50%);
+  z-index: 1;
+  cursor: pointer;
+}
+
+#hvaid-form-container #hvaid-content-container #hvaid-image-preview {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+}
+
+#hvaid-form-container #hvaid-content-container #hvaid-text-box-container {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+#hvaid-form-container
+  #hvaid-content-container
+  #hvaid-text-box-container
+  #hvaid-text-area {
+  padding: 0;
+  border: none;
+  resize: none;
+  outline: none;
+  font-size: 12px;
+  font-weight: 400;
+  font-style: normal;
+  line-height: 137.5%;
+  overflow-y: auto;
+  color: rgb(61, 64, 67);
+  background: rgb(255, 255, 255);
+  font-family: Inter, sans-serif;
+  width: 100%;
+  box-shadow: none;
+}
+
+#hvaid-form-container
+  #hvaid-content-container
+  #hvaid-text-box-container
+  #hvaid-word-count {
+  font-size: 11px;
+  margin: 0;
+  margin-top: 8px;
+  font-weight: 400;
+  font-style: normal;
+  line-height: 137.5%;
+  font-family: Roboto, sans-serif;
+  color: rgb(153, 153, 153);
+  text-align: right;
+}
+
+#hvaid-form-container .hvaid-upload-input-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
+
+#hvaid-form-container .hvaid-upload-input-container .upload-input-form {
+  flex: 1;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#hvaid-form-container
+  .hvaid-upload-input-container
+  .upload-input-form
+  .hvaid-upload-input {
+  display: none;
+}
+
+#hvaid-form-container
+  .hvaid-upload-input-container
+  .upload-input-form
+  .hvaid-upload-drop-area {
+  position: relative;
+  flex: 1;
+  height: 50px;
+  font-family: Poppins, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 2px dashed #cbd5e1;
+  min-width: 0;
+  min-height: 0;
+  border-radius: 1rem;
+  color: #175cff;
+}
+
+#hvaid-form-container
+  .hvaid-upload-input-container
+  .upload-input-form
+  .hvaid-upload-drop-area#hvaid-audio-upload-drop-area {
+  margin-top: 8px;
+  border: 2px dashed #ffc2a1;
+  color: #ff752b;
+}
+
+#hvaid-form-container
+  .hvaid-upload-input-container
+  .upload-input-form
+  .hvaid-upload-drop-area.hvaid-upload-ongoing {
+  border-color: #175cff !important;
+  background-color: #ecf2ff;
+}
+#hvaid-form-container #hvaid-content-container.hvaid-upload-ongoing {
+  border-color: #175cff !important;
+}
+
+#hvaid-form-container
+  .hvaid-upload-input-container
+  .upload-input-form
+  .hvaid-upload-drop-area#hvaid-audio-upload-drop-area.hvaid-upload-ongoing {
+  border-color: #ff752b !important;
+  background-color: #ffe8db;
+}
+
+#hvaid-form-container
+  .hvaid-upload-input-container
+  .upload-input-form
+  .hvaid-upload-drop-area
+  .hvaid-upload-input-label-text-container {
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+#hvaid-form-container
+  .hvaid-upload-input-container
+  .upload-input-form
+  .hvaid-upload-drop-area
+  .hvaid-upload-input-label-text-container
+  .hvaid-upload-input-label-text {
+  font-size: 12px;
+  font-weight: 400;
+  font-family: "Roboto", sans-serif;
+  margin: 0;
+  cursor: pointer;
+  position: relative;
+}
+#hvaid-form-container
+  .hvaid-upload-input-container
+  .upload-input-form
+  .hvaid-upload-drop-area
+  .hvaid-upload-input-label-text-container
+  .hvaid-upload-input-label-text:hover {
+  opacity: 0.7;
+}
+
+#hvaid-form-container
+  .hvaid-upload-input-container
+  .upload-input-form
+  .hvaid-upload-drop-area
+  .hvaid-upload-input-label-text-container
+  .hvaid-upload-input-label-text
+  .hvaid-upload-input-label-text-requirements {
+  font-size: 9px;
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  transform: translate(-50%, 100%);
+  white-space: nowrap;
+}
+
+#hvaid-form-container
+  .hvaid-upload-input-container
+  .upload-input-form
+  .hvaid-upload-drop-area
+  .hvaid-upload-paste-area {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  /* color: transparent;
+  caret-color: transparent; https://stackoverflow.com/questions/39345005/hide-caret-text-cursor-on-contenteditable-div-in-internet-explorer
+  text-shadow: 0 0 0 #333333; */
+}
+#hvaid-form-container
+  .hvaid-upload-input-container
+  .upload-input-form
+  .hvaid-upload-drop-area
+  .hvaid-upload-paste-area:focus {
+  outline: none;
+}
+
+#hvaid-form-container #hvaid-file-error-container {
+  visibility: hidden;
+  margin: 2px 4px;
+  min-height: 15px;
+}
+
+#hvaid-form-container
+  #hvaid-file-error-container
+  #hvaid-file-error-message-container {
+  display: flex;
+  position: relative;
+  align-items: center;
+}
+
+#hvaid-form-container #hvaid-file-error-container #hvaid-file-error-message {
+  color: #fe522d;
+  font-size: 11px;
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  margin: 0;
+}
+
+#hvaid-form-container #hvaid-file-error-container #hvaid-file-types-container {
+  display: none;
+  margin: 2px 0;
+}
+
+#hvaid-form-container
+  #hvaid-file-error-container
+  #hvaid-file-types-container
+  .hvaid-file-type-list {
+  color: rgb(96, 99, 103);
+  font-size: 11px;
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  margin: 0;
+}
+
+#hvaid-error-message-container {
+  font-size: 12px;
+  font-weight: 400;
+  font-style: normal;
+  text-align: center;
+  line-height: 137.5%;
+  letter-spacing: 0.02em;
+  color: rgb(96, 99, 103);
+  font-family: "Roboto", sans-serif;
+  display: block;
+}
+
+#hvaid-error-message-container span {
+  color: rgb(236, 107, 94);
+}
+
+#hvaid-popover-container #hvaid-term-of-service-container {
+  font-weight: 400;
+  font-family: "Roboto", sans-serif;
+  display: flex;
+  margin: 5px 0px;
+  margin-bottom: 8px;
+  align-items: center;
+  justify-content: center;
+}
+
+#hvaid-popover-container
+  #hvaid-term-of-service-container
+  #hvaid-term-of-service-checkbox {
+  display: block;
+  position: relative;
+  cursor: pointer;
+  font-size: 22px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+#hvaid-popover-container
+  #hvaid-term-of-service-container
+  #hvaid-term-of-service-checkbox
+  input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+#hvaid-popover-container
+  #hvaid-term-of-service-container
+  #hvaid-term-of-service-checkbox
+  #hvaid-term-of-service-checkbox-checkmark {
+  position: relative;
+  top: 0;
+  left: 0;
+  height: 20px;
+  width: 20px;
+  border-radius: 2px;
+  border: 1.11704px solid #cfd4e3;
+}
+
+/* When the checkbox is checked, add a blue background */
+#hvaid-popover-container
+  #hvaid-term-of-service-container
+  #hvaid-term-of-service-checkbox
+  input:checked
+  ~ #hvaid-term-of-service-checkbox-checkmark {
+  background-color: #3c79fb;
+  border-color: #3c79fb;
+}
+
+/* Create the checkmark/indicator (hidden when not checked) */
+#hvaid-popover-container
+  #hvaid-term-of-service-container
+  #hvaid-term-of-service-checkbox
+  #hvaid-term-of-service-checkbox-checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+/* Show the checkmark when checked */
+#hvaid-popover-container
+  #hvaid-term-of-service-container
+  #hvaid-term-of-service-checkbox
+  input:checked
+  ~ #hvaid-term-of-service-checkbox-checkmark:after {
+  display: block;
+}
+
+/* Style the checkmark/indicator */
+#hvaid-popover-container
+  #hvaid-term-of-service-container
+  #hvaid-term-of-service-checkbox
+  #hvaid-term-of-service-checkbox-checkmark:after {
+  left: 50%;
+  top: 50%;
+  width: 6px;
+  height: 12px;
+  border: solid white;
+  border-width: 0 3px 3px 0;
+  -webkit-transform: rotate(45deg) translate(-100%, -50%);
+  -ms-transform: rotate(45deg) translate(-100%, -50%);
+  transform: rotate(45deg) translate(-100%, -25%);
+}
+
+#hvaid-popover-container
+  #hvaid-term-of-service-container
+  #hvaid-term-of-service-text {
+  font-family: "Roboto", sans-serif;
+  font-size: 12px;
+  font-weight: 400px;
+  color: #424245;
+  margin: 0;
+  margin-left: 10px;
+  height: fit-content;
+}
+
+#hvaid-popover-container
+  #hvaid-term-of-service-container
+  #hvaid-term-of-service-text
+  #hvaid-term-of-service-text-link-container {
+  font-family: "Roboto", sans-serif;
+  font-size: 12px;
+  font-weight: 400px;
+  margin-left: 3px;
+}
+
+#hvaid-popover-container
+  #hvaid-term-of-service-container
+  #hvaid-term-of-service-text
+  #hvaid-term-of-service-text-link-container
+  #hvaid-term-of-service-text-link {
+  font-family: "Roboto", sans-serif;
+  font-size: 12px;
+  font-weight: 400px;
+  color: #175cff;
+  text-decoration: underline;
+}
+
+#hvaid-form-container #hvaid-submit-button-container {
+  display: flex;
+  align-self: center;
+  justify-content: center;
+}
+
+#hvaid-form-container #hvaid-submit-button-container button {
+  display: inline-flex;
+  appearance: none;
+  -webkit-box-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  justify-content: center;
+  user-select: none;
+  position: relative;
+  white-space: nowrap;
+  vertical-align: middle;
+  outline-offset: 2px;
+  line-height: 1.2;
+  height: 43px;
+  color: white;
+  width: 100%;
+  font-size: 14px;
+  font-weight: 500;
+  font-family: "Roboto", sans-serif;
+  background-color: #3693f9;
+  outline: transparent solid 2px;
+  border-radius: 7px;
+  margin: 0px 0px 11px;
+  border: none;
+  cursor: pointer;
+}
+
+#hvaid-form-container #hvaid-submit-button-container button:hover {
+  background-color: #77b4fc;
+}
+#hvaid-form-container #hvaid-submit-button-container button:active {
+  background-color: #2283f5;
+}
+
+#hvaid-form-container
+  #hvaid-submit-button-container
+  button.hvaid-submit-button-disabled {
+  cursor: not-allowed !important;
+  background-color: rgb(153, 153, 153) !important;
+}
+#hvaid-form-container
+  #hvaid-submit-button-container
+  button.hvaid-submit-button-disabled:hover {
+  background-color: #adadad !important;
+}
+#hvaid-form-container
+  #hvaid-submit-button-container
+  button.hvaid-submit-button-disabled:active {
+  background-color: #adadad !important;
+}
+
+@keyframes spinner {
+  0% {
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+  100% {
+    transform: translate(-50%, -50%) rotate(360deg);
+  }
+}

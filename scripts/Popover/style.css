@@ -1,0 +1,102 @@
+.hvaid-hidden-container {
+  display: none !important;
+}
+.hvaid-invisible-container {
+  visibility: hidden;
+}
+
+#hvaid-popover-container {
+  box-sizing: border-box;
+  position: fixed;
+  right: 45px;
+  bottom: 70px;
+  display: flex;
+  position: fixed;
+  z-index: 1000000;
+  border-radius: 10px;
+  pointer-events: auto;
+  flex-direction: column;
+  width: 350px;
+  height: auto;
+  box-shadow: rgb(0 0 0 / 30%) 0px 2px 10px;
+  padding: 15px 20px 20px;
+  background: rgb(255, 255, 255);
+}
+
+#hvaid-popover-container * {
+  line-height: 1;
+  box-sizing: border-box;
+}
+
+#hvaid-popover-container p {
+  margin: 0;
+}
+
+#hvaid-toggle-popover-icon {
+  right: 80px;
+  bottom: 20px;
+  display: flex;
+  position: fixed;
+  z-index: 1000000;
+  border-radius: 50%;
+  cursor: pointer;
+  box-shadow: rgb(0 0 0 / 20%) 0px 2px 8px;
+}
+
+#hvaid-toggle-popover-icon:hover {
+  box-shadow: rgb(0 0 0 / 25%) 0px 2px 9px;
+}
+
+#hvaid-toggle-popover-icon-mover {
+  position: absolute;
+  left: -5px;
+  top: -5px;
+  height: 20px;
+  width: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  background-color: #f3f3f3;
+  cursor: move;
+}
+
+#hvaid-toggle-popover-icon-mover:hover {
+  background-color: #f9f9f9;
+}
+
+#hvaid-popover-container #hvaid-header-container {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+#hvaid-popover-container #hvaid-header-container #hvaid-close-icon {
+  width: 12px;
+  height: 12px;
+  cursor: pointer;
+}
+
+#hvaid-popover-container #hvaid-divider-line {
+  width: 100%;
+  height: 1px;
+  margin: 11px 0px;
+  align-self: center;
+  background: rgb(229, 229, 229);
+}
+
+#hvaid-logo .hvaid-logo-stop {
+  transition: 0.5s;
+}
+#hvaid-logo .hvaid-logo-path {
+  transition: fill 0.5s;
+}
+
+#hvaid-logo .hvaid-logo-stop-loading {
+  stop-color: white !important;
+}
+#hvaid-logo .hvaid-logo-path-loading {
+  fill: white !important;
+}

@@ -1,0 +1,37 @@
+#hvaid-popover-container .hvaid-range-input-container .hvaid-range-input-time {
+  color: #175cff;
+  font-weight: 600;
+  font-size: 12px;
+  font-family: "Roboto", sans-serif;
+  margin: 0;
+  margin-bottom: 4px;
+  text-align: center;
+}
+
+#hvaid-popover-container .hvaid-range-input-container .hvaid-range-input {
+  appearance: none !important;
+  -webkit-appearance: none !important;
+  width: 100%;
+  height: 2px;
+  background: #175cff;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+
+#hvaid-popover-container
+  .hvaid-range-input-container
+  .hvaid-range-input::-webkit-slider-thumb {
+  appearance: none !important;
+  -webkit-appearance: none !important;
+  width: 10px;
+  height: 10px;
+  background: #175cff;
+  border-radius: 50%;
+}
+
+#hvaid-popover-container
+  .hvaid-range-input-container
+  .hvaid-range-input::-webkit-slider-thumb:hover {
+  box-shadow: 0 0 0 3px #175cff20;
+}

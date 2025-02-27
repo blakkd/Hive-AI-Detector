@@ -1,0 +1,174 @@
+{
+  "appName": {
+    "message": "Hive AI Detector",
+    "description": "name of the extension"
+  },
+  "appDesc": {
+    "message": "Check if text, images, audio or videos are AI generated",
+    "description": "a brief decription of what the extension does"
+  },
+  "textAreaPlaceholder": {
+    "message": "Enter text here or highlight text and right-click to scan. You can also drag/drop or paste an image here.",
+    "description": "placeholder text in the text input"
+  },
+  "charCountText": {
+    "message": "characters",
+    "description": "will be put into this format 1/1024 characters, meaning that the max number characters allowed is 1024 and 1 character has been entered."
+  },
+  "imageUploadOrPasteAreaText": {
+    "message": "Upload or Paste Image",
+    "description": "the text shown in the box for uploading and pasting image"
+  },
+  "audioUploadOrPasteAreaText": {
+    "message": "Upload or Paste Audio/Video",
+    "description": "the text shown in the box for uploading and pasting audio or video"
+  },
+  "audioUploadFileRequirements": {
+    "message": "with duration <= 30s",
+    "description": "text shown for the requirements of audio or vidoe files that can be uploaded"
+  },
+  "fileDurationError": {
+    "message": "Only files less than 30s are allowed.",
+    "description": "the error message to show when the file is longer than the limit."
+  },
+  "fileTypeError": {
+    "message": "File type is not supported. Below are the supported types.",
+    "description": "the error message to show when the file type is not supported."
+  },
+  "imageTypeName": {
+    "message": "image",
+    "description": "the name for image type"
+  },
+  "audioTypeName": {
+    "message": "audio",
+    "description": "the name for audio type"
+  },
+  "videoTypeName": {
+    "message": "video",
+    "description": "the name for video type"
+  },
+  "videoResultsName": {
+    "message": "Video Results",
+    "description": "title of video results"
+  },
+  "audioResultsName": {
+    "message": "Audio Results",
+    "description": "title of audio results"
+  },
+  "submitButtonText": {
+    "message": "Check Origin",
+    "description": "the text in the submit button"
+  },
+  "loadingText": {
+    "message": "Loading",
+    "description": "text to indicate loading, will be at the center of the loading spinner"
+  },
+  "goToMainPageButtonText": {
+    "message": "Start Over",
+    "description": "text in the button for going back to the input page"
+  },
+  "tryAgainButtonText": {
+    "message": "Try Again",
+    "description": "text in the button for submitting again"
+  },
+  "failedToGetImageText": {
+    "message": "Failed to fetch image",
+    "description": "error message for when the selected image could not be fetched"
+  },
+  "failedToGetAudioText": {
+    "message": "Failed to fetch audio",
+    "description": "error message for when the selected audio could not be fetched"
+  },
+  "failedToGetVideoText": {
+    "message": "Failed to fetch video",
+    "description": "error message for when the selected video could not be fetched"
+  },
+  "contentTypeInvalidText": {
+    "message": "The submitted content type is invalid.",
+    "description": "error message for when checking (from the context menu) a link that does not point to an image"
+  },
+  "errorMessageForFailedToParseResponse": {
+    "message": "Unable to parse response.",
+    "description": "error message for when JSON.parse fails"
+  },
+  "fallbackErrorMessage": {
+    "message": "Request failed, please try again",
+    "description": "shown when no error message is provided in the response"
+  },
+  "resultPrefixText": {
+    "message": "The input is likely to be:",
+    "description": "The prefix in the result. It will be shown in this format The input is likely to be AI generated."
+  },
+  "videoResultPrefixText": {
+    "message": "the input is likely to be:",
+    "description": "similar to resultPrefixText and shown for video result. It will be placed after the time as in 'At 0.0s, the input is likely to be' "
+  },
+  "aggregatedScoreText": {
+    "message": "Aggregated Score",
+    "description": "the name of the aggregated score for video and audio results"
+  },
+  "noResultMessage": {
+    "message": "Currently Unavailable",
+    "description": "message to show when no results are returned"
+  },
+  "videoResultPrefixTextPreposition": {
+    "message": "At",
+    "description": "a preposition that describes the time for which result is computed"
+  },
+  "resultExplanationGeneralText": {
+    "message": "This percentage specifies the probability that the input is AI generated.",
+    "description": "the explanation for the percentage shown as the detection result for text and image"
+  },
+  "resultExplanationByTimeForVideoText": {
+    "message": "This percentage specifies the probability that the video, at the current timestamp, is AI-generated.",
+    "description": "the explanation for the percentage shown as the detection result for video"
+  },
+  "resultExplanationByTimeForAudioText": {
+    "message": "This percentage specifies the probability that the audio, at the current timestamp, is AI-generated.",
+    "description": "the explanation for the percentage shown as the detection result for audio"
+  },
+  "resultExplanationAggregatedForVideoText": {
+    "message": "This is an overall estimate of the likelihood that the video is AI generated.",
+    "description": "the discription of the aggregated score shown for video"
+  },
+  "overallScoreDetails": {
+    "message": "Overall, the video is likely to be",
+    "description": "the discription of the overall result for video"
+  },
+  "editTextButtonText": {
+    "message": "Edit Text",
+    "description": "the text shown in the button for going back to the entered input and editing it"
+  },
+  "scanNewButtonText": {
+    "message": "Scan New",
+    "description": "the text shown in the button for going back to the empty input page"
+  },
+  "aiGeneratedResultText": {
+    "message": "AI-Generated",
+    "description": "result text to indicate that  input is ai generated"
+  },
+  "notAiGeneratedResultText": {
+    "message": "Not-AI-Generated",
+    "description": "result text to indicate that  input is not ai generated"
+  },
+  "previewNotAvailableMessage": {
+    "message": "Preview Unavailable",
+    "description": "text to show when the media fails to load in the browser"
+  },
+  "termsAndConditionsErrorMessage": {
+    "message": "Please agree to the Terms and Conditions.",
+    "description": "text to let user know to agree to the terms and conditions"
+  },
+  "goBackFromTermsAndConditionsButtonText": {
+    "message": "Go to Main Page",
+    "description": "text shown in the button for cancelling the current check since the user does not want to agree to the terms and conditions"
+  },
+  "maxCharsExceededMessage": {
+    "message": "Maxmimum number of characters exceeded.",
+    "decription": "when checking from the context menu, if the selected text is more than the max, this message will be shown"
+  },
+  "maxCharsExceededMessageExplanation": {
+    "message": "The maximum number of allowed characters is 2048",
+    "decription": "this message will say how many characters are allowed."
+  }
+}
