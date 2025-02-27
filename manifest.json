@@ -36,7 +36,7 @@
         "scripts/Popover/Pages/LoadingPage/index.js",
         "scripts/Popover/Pages/ErrorPage/index.js",
         "scripts/Popover/Pages/ResultsPage/utils.js",
-        "scripts/Popover/Pages/ResultsPage/Rangeinput/index.js",
+        "scripts/Popover/Pages/ResultsPage/RangeInput/index.js",
         "scripts/Popover/Pages/ResultsPage/videoResultUtils.js",
         "scripts/Popover/Pages/ResultsPage/index.js",
         "scripts/Popover/utils/submitForResults.js",
@@ -51,7 +51,7 @@
         "scripts/Popover/Pages/LoadingPage/style.css",
         "scripts/Popover/Pages/ErrorPage/style.css",
         "scripts/Popover/Pages/ResultsPage/style.css",
-        "scripts/Popover/Pages/ResultsPage/Rangeinput/style.css",
+        "scripts/Popover/Pages/ResultsPage/RangeInput/style.css",
         "scripts/Popover/Pages/TermsAndConditionsPage/style.css"
       ],
       "matches": ["*://*/*"]
