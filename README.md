@@ -8,4 +8,4 @@ That said:
 Original link: https://chromewebstore.google.com/detail/hive-ai-detector/cmeikcgfecnhojcbfapbmpbjgllklcbi
 
 
-*will be deleted when upstream is patched*
+*this repo will be deleted when upstream is patched*
