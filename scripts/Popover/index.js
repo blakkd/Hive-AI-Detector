@@ -33,7 +33,9 @@ const popoverButtonDefaultPositionBottom = 20;
 const goToDefaultPositionMessage = "set-toggle-button-to-default-position";
 const DOMTypeMessage = "DOM-type-unsupported";
 const getDocumentNotSupported = () => {
-  return document.contentType.split("/")[1] === "xml";
+  return document.contentType
+    ? document.contentType.split("/")[1] === "xml"
+    : false;
 };
 
 let LogoContainer;
@@ -49,7 +51,7 @@ TogglePopoverButton.id = "hvaid-toggle-popover-icon";
 const TogglePopoverButtonMover = document.createElement("div");
 TogglePopoverButtonMover.id = "hvaid-toggle-popover-icon-mover";
 TogglePopoverButtonMover.addEventListener("click", (e) => {
-  e.stopPropagation();
+  // e.stopPropagation();
 });
 TogglePopoverButton.addEventListener("mouseenter", () => {
   if (isPopoverOpen) {
@@ -73,7 +75,7 @@ const removePopoverButton = () => {
   document.body.removeChild(TogglePopoverButton);
 };
 chrome.storage.sync.get(showPopoverButtonKey).then((res) => {
-  if (res[showPopoverButtonKey]) {
+  if (res[showPopoverButtonKey] !== false) {
     addPopoverButton();
   }
 });
@@ -141,7 +143,9 @@ const makeElementDraggable = ({ element, mover, onMove }) => {
 
   function dragMouseDown(e) {
     e = e || window.event;
-    e.preventDefault();
+    if (e.target.tagName !== "TEXTAREA" && e.target.tagName !== "INPUT") {
+      e.preventDefault();
+    }
     e.stopPropagation();
     // get the mouse cursor position at beginning:
     pos3 = e.clientX;
@@ -179,7 +183,7 @@ const makeElementDraggable = ({ element, mover, onMove }) => {
     document.onmousemove = null;
   }
 };
-makeElementDraggable({ element: PopoverContainer, mover: PopoverContainer });
+makeElementDraggable({ element: PopoverContainer, mover: HeaderContainer });
 
 const onMoveToggleButton = debounce(({ left, top }) => {
   chrome.storage.sync.set({
