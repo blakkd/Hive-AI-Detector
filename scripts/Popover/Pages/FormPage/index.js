@@ -309,8 +309,22 @@ const toggleAllowedToSubmit = () => {
   }
 };
 
+// Apply dark mode to the form page when it's initialized
+chrome.storage.sync.get("dark_mode_enabled").then((result) => {
+  if (result.dark_mode_enabled) {
+    PopoverContainer.classList.add("dark-mode");
+  }
+});
+
 const switchToFormState = () => {
   page = { type: "form" };
   PopoverContainer.removeChild(PopoverContainer.lastChild);
   PopoverContainer.appendChild(FormPageContainer);
+  
+  // Apply dark mode if needed
+  chrome.storage.sync.get("dark_mode_enabled").then((result) => {
+    if (result.dark_mode_enabled) {
+      PopoverContainer.classList.add("dark-mode");
+    }
+  });
 };

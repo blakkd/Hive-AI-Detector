@@ -1,3 +1,37 @@
+/* Dark mode styles for results page */
+#hvaid-popover-container.dark-mode #hvaid-results-page-container .hvaid-results-text {
+  color: #e0e0e0;
+}
+
+#hvaid-popover-container.dark-mode #hvaid-results-page-container .hvaid-results-text.hvaid-blue-text {
+  color: #68a3ff;
+}
+
+#hvaid-popover-container.dark-mode #hvaid-results-page-container .hvaid-results-text.hvaid-red-text {
+  color: #ff986a;
+}
+
+#hvaid-popover-container.dark-mode #hvaid-results-page-container .hvaid-results-text .hvaid-results-percentage {
+  color: #ffffff;
+}
+
+#hvaid-popover-container.dark-mode #hvaid-results-page-container .hvaid-results-text .hvaid-results-text-inner,
+#hvaid-popover-container.dark-mode #hvaid-results-page-container .hvaid-results-text .hvaid-results-text-prefix {
+  color: #d0d0d0;
+}
+
+#hvaid-popover-container.dark-mode #hvaid-results-page-container .hvaid-results-text .hvaid-results-text-prefix .hvaid-results-text-inner {
+  color: #c0c0c0;
+}
+
+#hvaid-popover-container.dark-mode #hvaid-results-page-container .hvaid-results-text .hvaid-result-class {
+  color: #ffffff;
+}
+
+#hvaid-popover-container.dark-mode #hvaid-results-page-container .hvaid-results-text .hvaid-results-percentage-info-icon svg {
+  fill: white;
+}
+
 #hvaid-popover-container:has(#hvaid-results-page-left-column) {
   width: 800px !important;
 }
@@ -220,6 +254,7 @@
   font-size: 28px;
   margin: 0;
   font-family: "Roboto", sans-serif;
+  color: #333333;
 }
 
 #hvaid-results-page-container
@@ -272,6 +307,7 @@
   font-size: 16px;
   margin: 0;
   font-family: "Roboto", sans-serif;
+  color: #333333;
 }
 
 #hvaid-results-page-container

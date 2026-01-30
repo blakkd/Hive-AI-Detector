@@ -35,6 +35,39 @@ if (typeof showPopoverButtonResult[showPopoverButtonKey] != "boolean") {
   ToggleButton.checked = showPopoverButtonResult[showPopoverButtonKey];
 }
 
+// Dark mode setup
+const darkModeKey = "dark_mode_enabled";
+const DarkModeToggle = document.getElementById("hvaid-dark-mode-toggle-button");
+const handleToggleDarkMode = debounce(() => {
+  const isEnabled = DarkModeToggle.checked;
+  chrome.storage.sync.set({ [darkModeKey]: isEnabled });
+  if (isEnabled) {
+    document.body.classList.add("dark-mode");
+    // Also apply to popover if it exists
+    const popoverContainer = document.getElementById("hvaid-popover-container");
+    if (popoverContainer) {
+      popoverContainer.classList.add("dark-mode");
+    }
+  } else {
+    document.body.classList.remove("dark-mode");
+    // Also remove from popover if it exists
+    const popoverContainer = document.getElementById("hvaid-popover-container");
+    if (popoverContainer) {
+      popoverContainer.classList.remove("dark-mode");
+    }
+  }
+});
+DarkModeToggle.addEventListener("click", handleToggleDarkMode);
+const darkModeResult = await chrome.storage.sync.get(darkModeKey);
+if (typeof darkModeResult[darkModeKey] != "boolean") {
+  chrome.storage.sync.set({ [darkModeKey]: false });
+} else {
+  DarkModeToggle.checked = darkModeResult[darkModeKey];
+  if (darkModeResult[darkModeKey]) {
+    document.body.classList.add("dark-mode");
+  }
+}
+
 /* logo icon */
 const TitleContainerInner = document.getElementById(
   "hvaid-title-container-inner"
@@ -47,6 +80,7 @@ const getLogoIcon = () => {
       LogoContainer = document.createElement("div");
       LogoContainer.innerHTML = this.responseText;
       TitleContainerInner.appendChild(LogoContainer);
+      updateLogoColors();
     } else {
       // console.log("files not found");
     }
@@ -55,6 +89,21 @@ const getLogoIcon = () => {
   xhttp.send();
 };
 getLogoIcon();
+
+/* Update logo colors based on theme */
+const updateLogoColors = () => {
+  const logoResetPaths = document.querySelectorAll('.hvaid-logo-reset-path');
+  if (document.body.classList.contains('dark-mode')) {
+    logoResetPaths.forEach(path => {
+      path.setAttribute('fill', '#e0e0e0');
+    });
+  } else {
+    logoResetPaths.forEach(path => {
+      path.setAttribute('fill', '#313131');
+    });
+  }
+};
+
 
 const goToDefaultPosition = () => {
   analyticsHelper.fireEvent("go_to_default_popover_button_position");

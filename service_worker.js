@@ -19,10 +19,6 @@ const prodUrl = "https://plugin.hivemoderation.com";
 //on installation of chrome extension: create client id, create contextMenuItem, show popover icon, open installation complete page
 chrome.runtime.onInstalled.addListener((details) => {
   if (details.reason == "install") {
-    chrome.tabs.create({
-      url: "https://hivemoderation.com/ai-generated-content-detection/installation-complete ",
-      active: true,
-    });
     chrome.storage.sync.set({ [showPopoverButtonKey]: true });
   }
 

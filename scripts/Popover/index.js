@@ -90,6 +90,16 @@ chrome.storage.onChanged.addListener((changes, area) => {
       removePopoverButton();
     }
   }
+  
+  // Handle dark mode changes
+  if (area === "sync" && changes["dark_mode_enabled"]) {
+    const isDarkMode = changes["dark_mode_enabled"]?.newValue;
+    if (isDarkMode) {
+      PopoverContainer.classList.add("dark-mode");
+    } else {
+      PopoverContainer.classList.remove("dark-mode");
+    }
+  }
 });
 
 const changeTogglePopoverButtonPosition = ({ left, top }) => {
@@ -123,6 +133,25 @@ chrome.storage.sync
 
 const PopoverContainer = document.createElement("div");
 PopoverContainer.id = "hvaid-popover-container";
+
+// Check for dark mode preference and apply to popover
+chrome.storage.sync.get("dark_mode_enabled").then((result) => {
+  if (result.dark_mode_enabled) {
+    PopoverContainer.classList.add("dark-mode");
+  }
+});
+
+// Listen for dark mode changes
+chrome.storage.onChanged.addListener((changes, area) => {
+  if (area === "sync" && changes["dark_mode_enabled"]) {
+    const isDarkMode = changes["dark_mode_enabled"]?.newValue;
+    if (isDarkMode) {
+      PopoverContainer.classList.add("dark-mode");
+    } else {
+      PopoverContainer.classList.remove("dark-mode");
+    }
+  }
+});
 
 const makeElementDraggable = ({ element, mover, onMove }) => {
   if (!element.style) {

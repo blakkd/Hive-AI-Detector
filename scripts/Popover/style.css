@@ -23,6 +23,32 @@
   background: rgb(255, 255, 255);
 }
 
+/* Dark mode styles for popover */
+#hvaid-popover-container.dark-mode {
+  background: #2d2d2d;
+  color: #e0e0e0;
+}
+
+#hvaid-popover-container.dark-mode #hvaid-header-container {
+  border-bottom: 1px solid #444;
+}
+
+#hvaid-popover-container.dark-mode #hvaid-header-container #hvaid-close-icon {
+  filter: invert(1);
+}
+
+#hvaid-popover-container.dark-mode #hvaid-divider-line {
+  background: #444;
+}
+
+#hvaid-popover-container.dark-mode #hvaid-logo .hvaid-logo-stop {
+  stop-color: white !important;
+}
+
+#hvaid-popover-container.dark-mode #hvaid-logo .hvaid-logo-path {
+  fill: white !important;
+}
+
 #hvaid-popover-container * {
   line-height: 1;
   box-sizing: border-box;

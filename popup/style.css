@@ -1,6 +1,18 @@
 body {
   margin: 0;
   color: #1a202c;
+  background: white;
+}
+
+/* Dark mode styles */
+body.dark-mode {
+  background: #1e1e1e;
+  color: #e0e0e0;
+}
+
+/* Override specific elements in dark mode */
+body.dark-mode #hvaid-dark-mode-text {
+  color: #e0e0e0;
 }
 
 #hvaid-popup-container {
@@ -60,6 +72,37 @@ hr {
 #hvaid-settings-container {
   width: 80%;
   margin: 0 auto;
+}
+
+#hvaid-dark-mode-container {
+  display: flex;
+  -webkit-box-align: center;
+  align-items: center;
+  -webkit-box-pack: justify;
+  justify-content: space-between;
+  flex-direction: row;
+  margin-bottom: 8px;
+}
+
+#hvaid-dark-mode-container #hvaid-dark-mode-text {
+  font-family: "Roboto", sans-serif;
+  font-size: 15px;
+  font-weight: 500;
+  color: rgb(112, 116, 121);
+  margin-right: 20px;
+}
+
+#hvaid-dark-mode-container label {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+}
+
+#hvaid-dark-mode-toggle-button {
+  opacity: 0;
+  width: 0;
+  height: 0;
 }
 
 #hvaid-toggle-container {
@@ -157,6 +200,11 @@ input:checked + .hvaid-toggle-button-slider:before {
 #hvaid-back-to-default-position-container
   #hvaid-back-to-default-position-icon:hover {
   opacity: 0.5;
+}
+
+/* Logo colors for dark mode */
+body.dark-mode .hvaid-logo-reset-path {
+  fill: #e0e0e0;
 }
 
 #hvaid-popup-content-type-error {

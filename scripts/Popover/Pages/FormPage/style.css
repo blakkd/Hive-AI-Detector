@@ -7,6 +7,25 @@
   justify-content: center;
   position: relative;
 }
+
+/* Dark mode styles for form page */
+#hvaid-popover-container.dark-mode #hvaid-form-container #hvaid-content-container {
+  border-color: rgba(128, 128, 128, 0.37);
+  background: #2d2d2d;
+}
+
+#hvaid-popover-container.dark-mode #hvaid-form-container
+  #hvaid-content-container
+  #hvaid-content-overlay {
+  background-color: #2d2d2d;
+}
+
+#hvaid-popover-container.dark-mode #hvaid-form-container
+  #hvaid-content-container
+  #hvaid-content-overlay
+  p {
+  color: #e0e0e0;
+}
 #hvaid-content-container #hvaid-content-overlay {
   width: calc(100% - 32px);
   height: 187.44px; /* height of TextBoxContainer*/
@@ -206,6 +225,22 @@
   box-shadow: none;
 }
 
+/* Dark mode styles for text area */
+#hvaid-popover-container.dark-mode #hvaid-form-container
+  #hvaid-content-container
+  #hvaid-text-box-container
+  #hvaid-text-area {
+  color: #e0e0e0;
+  background: #2d2d2d;
+}
+
+#hvaid-popover-container.dark-mode #hvaid-form-container
+  #hvaid-content-container
+  #hvaid-text-box-container
+  #hvaid-word-count {
+  color: #a0a0a0;
+}
+
 #hvaid-form-container
   #hvaid-content-container
   #hvaid-text-box-container
@@ -262,6 +297,59 @@
   color: #175cff;
 }
 
+/* Dark mode styles for upload areas */
+#hvaid-popover-container.dark-mode #hvaid-form-container
+  .hvaid-upload-input-container
+  .upload-input-form
+  .hvaid-upload-drop-area {
+  border-color: #444;
+  color: #68a3ff;
+  background: #2d2d2d;
+}
+
+#hvaid-popover-container.dark-mode #hvaid-form-container
+  .hvaid-upload-input-container
+  .upload-input-form
+  .hvaid-upload-drop-area#hvaid-audio-upload-drop-area {
+  border-color: #ff752b;
+  color: #ff986a;
+}
+
+#hvaid-popover-container.dark-mode #hvaid-form-container
+  .hvaid-upload-input-container
+  .upload-input-form
+  .hvaid-upload-drop-area.hvaid-upload-ongoing {
+  border-color: #68a3ff !important;
+  background-color: #2d2d2d;
+}
+
+#hvaid-popover-container.dark-mode #hvaid-form-container
+  .hvaid-upload-input-container
+  .upload-input-form
+  .hvaid-upload-drop-area#hvaid-audio-upload-drop-area.hvaid-upload-ongoing {
+  border-color: #ff986a !important;
+  background-color: #2d2d2d;
+}
+
+#hvaid-popover-container.dark-mode #hvaid-form-container
+  .hvaid-upload-input-container
+  .upload-input-form
+  .hvaid-upload-drop-area
+  .hvaid-upload-input-label-text-container
+  .hvaid-upload-input-label-text {
+  color: #e0e0e0;
+}
+
+#hvaid-popover-container.dark-mode #hvaid-form-container
+  .hvaid-upload-input-container
+  .upload-input-form
+  .hvaid-upload-drop-area
+  .hvaid-upload-input-label-text-container
+  .hvaid-upload-input-label-text
+  .hvaid-upload-input-label-text-requirements {
+  color: #a0a0a0;
+}
+
 #hvaid-form-container
   .hvaid-upload-input-container
   .upload-input-form
@@ -312,6 +400,7 @@
   margin: 0;
   cursor: pointer;
   position: relative;
+  color: #333333;
 }
 #hvaid-form-container
   .hvaid-upload-input-container
@@ -335,6 +424,7 @@
   bottom: 0;
   transform: translate(-50%, 100%);
   white-space: nowrap;
+  color: #666666;
 }
 
 #hvaid-form-container
@@ -362,6 +452,24 @@
   visibility: hidden;
   margin: 2px 4px;
   min-height: 15px;
+}
+
+/* Dark mode styles for file error container */
+#hvaid-popover-container.dark-mode #hvaid-form-container #hvaid-file-error-container {
+  color: #ff6969;
+}
+
+#hvaid-popover-container.dark-mode #hvaid-form-container
+  #hvaid-file-error-container
+  #hvaid-file-error-message {
+  color: #ff6969;
+}
+
+#hvaid-popover-container.dark-mode #hvaid-form-container
+  #hvaid-file-error-container
+  #hvaid-file-types-container
+  .hvaid-file-type-list {
+  color: #a0a0a0;
 }
 
 #hvaid-form-container
@@ -420,6 +528,23 @@
   margin-bottom: 8px;
   align-items: center;
   justify-content: center;
+}
+
+/* Dark mode styles for terms and conditions */
+#hvaid-popover-container.dark-mode #hvaid-term-of-service-container {
+  color: #e0e0e0;
+}
+
+#hvaid-popover-container.dark-mode #hvaid-term-of-service-container
+  #hvaid-term-of-service-text {
+  color: #e0e0e0;
+}
+
+#hvaid-popover-container.dark-mode #hvaid-term-of-service-container
+  #hvaid-term-of-service-text
+  #hvaid-term-of-service-text-link-container
+  #hvaid-term-of-service-text-link {
+  color: #68a3ff;
 }
 
 #hvaid-popover-container
@@ -571,6 +696,19 @@
   cursor: pointer;
 }
 
+/* Dark mode styles for submit button */
+#hvaid-popover-container.dark-mode #hvaid-form-container #hvaid-submit-button-container button {
+  background-color: #4a9fff;
+}
+
+#hvaid-popover-container.dark-mode #hvaid-form-container #hvaid-submit-button-container button:hover {
+  background-color: #68b5ff;
+}
+
+#hvaid-popover-container.dark-mode #hvaid-form-container #hvaid-submit-button-container button:active {
+  background-color: #2283f5;
+}
+
 #hvaid-form-container #hvaid-submit-button-container button:hover {
   background-color: #77b4fc;
 }
@@ -583,6 +721,25 @@
   button.hvaid-submit-button-disabled {
   cursor: not-allowed !important;
   background-color: rgb(153, 153, 153) !important;
+}
+
+/* Dark mode styles for disabled submit button */
+#hvaid-popover-container.dark-mode #hvaid-form-container
+  #hvaid-submit-button-container
+  button.hvaid-submit-button-disabled {
+  background-color: #555 !important;
+}
+
+#hvaid-popover-container.dark-mode #hvaid-form-container
+  #hvaid-submit-button-container
+  button.hvaid-submit-button-disabled:hover {
+  background-color: #666 !important;
+}
+
+#hvaid-popover-container.dark-mode #hvaid-form-container
+  #hvaid-submit-button-container
+  button.hvaid-submit-button-disabled:active {
+  background-color: #555 !important;
 }
 #hvaid-form-container
   #hvaid-submit-button-container
