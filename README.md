@@ -1,26 +1,43 @@
-Unofficial fork of the Hive AI Detector Chrome extension - https://chromewebstore.google.com/detail/hive-ai-detector/cmeikcgfecnhojcbfapbmpbjgllklcbi
+_Unofficial fork of the Hive AI Detector Chrome extension - https://chromewebstore.google.com/detail/hive-ai-detector/cmeikcgfecnhojcbfapbmpbjgllklcbi_
 
-Solves the installation error caused by improper text casing on version 0.0.10.
+_➡ Solves the installation error caused by improper text casing on version 0.0.10._
 
-Thanks to https://thehive.ai/ for providing this **essential** tool for free!
+_Thanks to https://thehive.ai/ for providing this **essential** tool for free!_
 
 ---
 
-Check if text, images, audio or videos are AI generated
+### Installation Instructions
 
-Detect AI-generated images, videos, text, and audio from popular generative models right from your browser for free. Yes, that's right, all content types in the same free extension!
+#### Option A: Download Release Package
 
-Hive's AI-generated Content Detection model allows you to quickly scan any image, video, text, or audio file on the web to determine whether or not it was made by AI. Use Hive AI Detector easily while browsing with three different ways to scan content — right-clicking it right on the webpage, pasting it into our text box, or uploading a file.
+1. Go to https://github.com/blakkd/Hive-AI-Detector/releases
+2. Download the latest `.zip` file
+3. Extract the contents to a folder on your computer
+4. Open Chrome and go to Manage Extensions
+5. Enable **Developer mode** (toggle in top-right corner)
+6. Click **Load unpacked** and select the extracted folder
 
-This free tool displays the likelihood that something is AI-generated. For image and video inputs, our Detector also predicts what generative engine was used to create it.
+#### Option B: Clone with Git
 
-Our free AI Content Detection has been praised by The New York Times, The Wall Street Journal, and PCWorld, as well as by various artists and educators worldwide. It can be used to check for plagiarism, catch misinformation, and more — no login necessary.
+1. Open terminal/command prompt
+2. Run: `git clone https://github.com/anomalyco/Hive-AI-Detector.git`
+3. Navigate to the directory: `cd Hive-AI-Detector`
+4. Open Chrome and go to Manage Extensions
+5. Enable **Developer mode** (toggle in top-right corner)
+6. Click **Load unpacked** and select the `Hive-AI-Detector` repository folder
 
-Our detector uses AI itself to detect AI-generated content. With machine learning, we're able to spot otherwise imperceptible differences between what's human-made and what's AI-generated, beyond style, word choice, and number of fingers. We trained our model on millions of examples of both AI-generated and human-made content, and we regularly update it to perform well on the newest versions of Midjourney, ChatGPT, etc.
+### How to Use the Extension
 
-To use the extension:
+1. After installation, click on the puzzle icon of Chrome to show your installed extensions, and then the Hive AI Detector icon to customize it
+2. To scan content, either:
+   - Right-click directly on any text/image/video (30s max) on a webpage
+   - Click the Hive logo (if you enabled it, I personnaly don't) to enter content via text box or file upload
+3. View your result 😎
 
-From this page, click "Add to Chrome"
-Click on the puzzle piece icon to the right of your search bar and pin Hive AI Detector to the extensions menu
-To scan content, either right-click it directly on a webpage or click the Hive logo to enter content via text box or file upload
-View your result!
+#### Notes and performance
+
+- **Text**:
+  - **English only**
+  - **AI-generated text is not always detected**, especially for newer models
+- **Image**:
+  - Detection **works great**, even for latest models!
